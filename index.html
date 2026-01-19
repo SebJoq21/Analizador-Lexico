@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scanner Léxico para C</title>
+    
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Analizador Léxico (Scanner) - Lenguaje C</h1>
+    
+    <div class="control-panel">
+        <h3>Cargar Archivo .c</h3>
+        <input type="file" id="fileInput" accept=".c,.txt">
+        
+        <p><em>O pega tu código aquí abajo:</em></p>
+        <textarea id="sourceCode" placeholder="// Escribe tu código C aquí o carga un archivo..."></textarea>
+        <br>
+        <button onclick="iniciarScanner()">Analizar Código</button>
+    </div>
+
+    <div id="outputArea" style="display:none;">
+        <div class="results">
+            <div class="stat-card">
+                <h3>Estadísticas (Conteo)</h3>
+                <table id="statsTable">
+                    <thead>
+                        <tr>
+                            <th>Tipo de Elemento</th>
+                            <th>Cantidad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        </tbody>
+                </table>
+            </div>
+
+            <div class="stat-card token-list">
+                <h3>Orden de Aparición</h3>
+                <table id="tokensTable">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Token (Valor)</th>
+                            <th>Tipo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
